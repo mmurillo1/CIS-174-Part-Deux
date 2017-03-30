@@ -1,0 +1,18 @@
+﻿.btn-space {
+    margin-top: 5px;
+}
+
+.container{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+    height: 400px;
+}
+
+.vert{
+    position: relative;
+    top: 50%;
+}
+
