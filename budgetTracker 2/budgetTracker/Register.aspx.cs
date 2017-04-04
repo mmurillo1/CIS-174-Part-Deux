@@ -17,7 +17,7 @@ namespace budgetTracker
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["UserDataConnectionString"].ConnectionString);
                 conn.Open();
-                String userExists = "select count(*) from userData where userName'" + rUserNameBox.Text + "'";
+                String userExists = "select count(*) from userData where userName='" + rUserNameBox.Text + "'";
                 SqlCommand com = new SqlCommand(userExists, conn);
                 int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
                 if (temp == 1)
@@ -35,14 +35,16 @@ namespace budgetTracker
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["UserDataConnectionString"].ConnectionString);
                 conn.Open();
-                String Insertdata = "insert into userData (userName,password) values(@userName,@password)";
+                String Insertdata = "insert into userData (userName,password,email) values(@userName,@password,@email)";
                 SqlCommand com = new SqlCommand(Insertdata, conn);
-                com.Parameters.AddWithValue("@userName", rUserNameBox);
-                com.Parameters.AddWithValue("@password", rPasswordBox);
+                com.Parameters.AddWithValue("@userName", rUserNameBox.Text);
+                com.Parameters.AddWithValue("@password", rPasswordBox.Text);
+                com.Parameters.AddWithValue("@email", rEmailBox.Text);
                 com.ExecuteNonQuery();
+                Response.Redirect("Login.aspx");
                 Response.Write("You have succesfully registered!");
                 conn.Close();
-                Response.Redirect("Login.aspx");
+                
             }
             catch (Exception exc)
             {

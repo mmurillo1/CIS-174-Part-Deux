@@ -20,6 +20,10 @@
                         <td><asp:TextBox ID="rUserNameBox" class="form-control" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
+                        <td><asp:Label ID="emailLbl"  runat="server" Text="Email"></asp:Label></td>
+                        <td><asp:TextBox ID="rEmailBox" class="form-control" runat="server" ></asp:TextBox></td>
+                    </tr>
+                    <tr>
                         <td><asp:Label ID="passwordlbl"  runat="server" Text="Password"></asp:Label></td>
                         <td><asp:TextBox ID="rPasswordBox" class="form-control" runat="server" ></asp:TextBox></td>
                     </tr>
