@@ -13,14 +13,12 @@
         <asp:SqlDataSource ID="UserDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserDataConnectionString %>" SelectCommand="SELECT * FROM [userData]"></asp:SqlDataSource>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="UserDataSource" ForeColor="Black" GridLines="Vertical">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="userName" DataSourceID="UserDataSource" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-                <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName" />
+                <asp:BoundField DataField="userName" HeaderText="userName" ReadOnly="True" SortExpression="userName" />
                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

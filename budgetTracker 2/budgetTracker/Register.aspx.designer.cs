@@ -40,6 +40,24 @@ namespace budgetTracker {
         protected global::System.Web.UI.WebControls.TextBox rUserNameBox;
         
         /// <summary>
+        /// emailLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label emailLbl;
+        
+        /// <summary>
+        /// rEmailBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rEmailBox;
+        
+        /// <summary>
         /// passwordlbl control.
         /// </summary>
         /// <remarks>
