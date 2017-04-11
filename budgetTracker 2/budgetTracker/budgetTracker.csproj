@@ -146,6 +146,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Expense.cs" />
+    <Content Include="App_Code\ExpenseDB.cs" />
     <Compile Include="dataManager.aspx.cs">
       <DependentUpon>dataManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
